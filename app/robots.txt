@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard/*
+Disallow: /api/*
+
+Sitemap: https://flashlearn.vercel.app/sitemap.xml
+
+
+
