@@ -32,7 +32,9 @@ export default function Sidebar({ userRole, userName, userEmail }: SidebarProps)
   const userNavItems: NavItem[] = [
     { name: 'Home', href: '/dashboard/user', icon: '🏠' },
     { name: 'My Courses', href: '/dashboard/user/courses', icon: '📚' },
+    { name: 'Assignments', href: '/dashboard/user/assignments', icon: '📝' },
     { name: 'AI Quiz', href: '/dashboard/user/quiz', icon: '🧠' },
+    { name: 'Notifications', href: '/dashboard/user/notifications', icon: '🔔' },
     { name: 'Leaderboard', href: '/dashboard/user/leaderboard', icon: '🏆' },
     { name: 'Certificates', href: '/dashboard/user/certificates', icon: '🎓' },
     { name: 'Profile', href: '/dashboard/user/profile', icon: '👤' },
@@ -41,8 +43,11 @@ export default function Sidebar({ userRole, userName, userEmail }: SidebarProps)
   const adminNavItems: NavItem[] = [
     { name: 'Dashboard', href: '/dashboard/admin', icon: '📊' },
     { name: 'Manage Courses', href: '/dashboard/admin/courses', icon: '📚' },
+    { name: 'Manage Assignments', href: '/dashboard/admin/assignments', icon: '📝' },
     { name: 'Manage Users', href: '/dashboard/admin/users', icon: '👥' },
+    { name: 'Announcements', href: '/dashboard/admin/announcements', icon: '📢' },
     { name: 'Analytics', href: '/dashboard/admin/analytics', icon: '📈' },
+    { name: 'Profile', href: '/dashboard/admin/profile', icon: '👤' },
     { name: 'Settings', href: '/dashboard/admin/settings', icon: '⚙️' },
   ];
 

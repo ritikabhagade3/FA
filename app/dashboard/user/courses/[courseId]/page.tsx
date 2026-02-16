@@ -19,6 +19,7 @@ import {
 import Sidebar from '@/components/Sidebar';
 import PageTransition from '@/components/PageTransition';
 import AuthGuard from '@/components/AuthGuard';
+import BackButton from '@/components/BackButton';
 
 export default function CoursePlayerPage() {
   const params = useParams();
@@ -166,21 +167,20 @@ export default function CoursePlayerPage() {
                 <motion.div
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mb-6"
+                  className="mb-6 flex items-start justify-between gap-4"
                 >
-                  <button
-                    onClick={() => router.push('/dashboard/user/courses')}
-                    className="mb-4 text-blue-600 hover:text-blue-700 dark:text-blue-400 font-semibold"
-                  >
-                    ← Back to Courses
-                  </button>
-                  <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                    {course.title}
-                  </h1>
-                  <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-4">
-                    <span>👤 {course.instructor}</span>
-                    <span>📚 {lessons.length} lessons</span>
-                    <span>⏱️ {course.duration} min</span>
+                  <div className="flex items-start gap-4">
+                    <BackButton className="mt-1" />
+                    <div>
+                      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                        {course.title}
+                      </h1>
+                      <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-4">
+                        <span>👤 {course.instructor}</span>
+                        <span>📚 {lessons.length} lessons</span>
+                        <span>⏱️ {course.duration} min</span>
+                      </div>
+                    </div>
                   </div>
                   
                   {/* Progress Bar */}
